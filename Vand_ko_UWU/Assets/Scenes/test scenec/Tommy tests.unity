@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 143826233}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: enviorment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 1665530978}
   - component: {fileID: 1665530980}
   - component: {fileID: 1665530979}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,5 +488,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRB: {fileID: 2007399410}
   movementSpeed: 500
-  jumpHeigth: 500
-  groundCheck: {fileID: 2007399411}
+  jumpHeigth: 50
+  jumpLength: 3
