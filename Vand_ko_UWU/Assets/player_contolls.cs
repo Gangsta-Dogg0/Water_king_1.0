@@ -52,10 +52,6 @@ public class player_contolls : MonoBehaviour
         if (jumped == 1 && isGrounded)
         {
             rb.AddForce(new Vector2(0, jumpspeed));
-            hasjumped = true;
-        }
-        else if (jumped == 0){
-            hasjumped = false;
         }
 
     }
