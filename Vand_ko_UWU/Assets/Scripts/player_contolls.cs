@@ -28,12 +28,14 @@ public class player_contolls : MonoBehaviour
     {
         horuzontalinput.Enable();
         jumpInput.Enable();
+        swimInput.Enable();
     }
 
     private void OnDisable()
     {
         horuzontalinput.Disable();
         jumpInput.Disable();
+        swimInput.Disable();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -70,9 +72,14 @@ public class player_contolls : MonoBehaviour
 
         if (swim == 1)
         {
+            print("hi");
             rb.AddForce(new Vector2(direction * swimSpeed, jumped * swimSpeed));
+            rb.gravityScale = 0.05f;
         }
-
+        else if (swim == 0)
+        {
+            rb.gravityScale = 0.4f;
+        }
     }
     private void OnTiggerStay2D(Collider2D collider)
     {
