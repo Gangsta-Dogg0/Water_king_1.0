@@ -24,7 +24,10 @@ public class airBar : MonoBehaviour
     void Update()
     {
         curentAir += suficationAmount * Time.deltaTime;
+        curentAir = Mathf.Clamp(curentAir, 0, 100);
         airbar.value = curentAir;
+
+        print(curentAir);
 
         colur.color = gradient.Evaluate(airbar.value / 100);
 
@@ -33,12 +36,5 @@ public class airBar : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        
-    }
+
 }

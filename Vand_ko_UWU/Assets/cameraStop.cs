@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cameraStop : MonoBehaviour
 {
-
+    public Transform player;
     void Start()
     {
         
@@ -12,8 +12,13 @@ public class cameraStop : MonoBehaviour
 
     void Update()
     {
+        float x = player.position.x;
 
-        Mathf.Clamp(transform.position.x, -21, 21);
-        Mathf.Clamp(transform.position.y, -21, 21);
+        //why math dont work pls help???? :( <--- me rn because of it dont work
+        x = Mathf.Clamp(x, -19, 19);
+
+        print(x);
+        
+        transform.position = new Vector3(x,-1,-10);
     }
 }
