@@ -16,8 +16,6 @@ public class cameraStop : MonoBehaviour
 
         //why math dont work pls help???? :( <--- me rn because of it dont work
         x = Mathf.Clamp(x, -19, 19);
-
-        print(x);
         
         transform.position = new Vector3(x,-1,-10);
     }

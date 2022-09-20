@@ -5,7 +5,7 @@ using UnityEngine;
 public class airDetection : MonoBehaviour
 {
     public airBar airBar;
-    public float airRegenRate = 4.20f;
+    public float airRegenRate = 20f;
 
     void Start()
     {
@@ -15,7 +15,7 @@ public class airDetection : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            airBar.suficationAmount = airRegenRate;
+            airBar.breatheAmount = airRegenRate;
         }
     }
 
@@ -23,7 +23,7 @@ public class airDetection : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            airBar.suficationAmount = -airRegenRate;
+            airBar.breatheAmount = 0;
         }
     }
     void Update()

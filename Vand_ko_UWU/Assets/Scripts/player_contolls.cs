@@ -10,6 +10,7 @@ public class player_contolls : MonoBehaviour
     public float movespeed = 5f;
     public float jumpspeed = 50f;
     public float swimSpeed = 20f;
+    public float swimSuffication = -10f;
     public InputAction horuzontalinput;
     public InputAction jumpInput;
     public InputAction swimInput;
@@ -18,6 +19,7 @@ public class player_contolls : MonoBehaviour
     public int invincibilityframes;
     public int invincibilitycooldown;
     bool isGrounded;
+    public airBar airBar;
 
     private float direction; //
     private float jumped; //
@@ -72,13 +74,14 @@ public class player_contolls : MonoBehaviour
 
         if (swim == 1)
         {
-            print("hi");
             rb.AddForce(new Vector2(direction * swimSpeed, jumped * swimSpeed));
             rb.gravityScale = 0.05f;
+            airBar.suficationAmount = swimSuffication;
         }
         else if (swim == 0)
         {
             rb.gravityScale = 0.4f;
+            airBar.suficationAmount = -4.20f;
         }
     }
     private void OnTiggerStay2D(Collider2D collider)

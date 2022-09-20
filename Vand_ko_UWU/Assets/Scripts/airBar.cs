@@ -10,6 +10,7 @@ public class airBar : MonoBehaviour
     public Slider airbar;
     public float air = 50f;
     public float suficationAmount = -4.20f;
+    public float breatheAmount = -0f;
     public Gradient gradient;
     public Image colur;
 
@@ -24,6 +25,10 @@ public class airBar : MonoBehaviour
     void Update()
     {
         curentAir += suficationAmount * Time.deltaTime;
+        curentAir = Mathf.Clamp(curentAir, 0, 100);
+        airbar.value = curentAir;
+
+        curentAir += breatheAmount * Time.deltaTime;
         curentAir = Mathf.Clamp(curentAir, 0, 100);
         airbar.value = curentAir;
 

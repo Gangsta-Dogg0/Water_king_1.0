@@ -364,6 +364,7 @@ MonoBehaviour:
   movespeed: 7
   jumpspeed: 500
   swimSpeed: 500
+  swimSuffication: 7
   horuzontalinput:
     m_Name: Horuzontalinput
     m_Type: 0
@@ -451,6 +452,7 @@ MonoBehaviour:
   health: 0
   invincibilityframes: 0
   invincibilitycooldown: 0
+  airBar: {fileID: 0}
 --- !u!114 &206716660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +642,7 @@ MonoBehaviour:
   airbar: {fileID: 404115858}
   air: 100
   suficationAmount: 10
+  breatheAmount: -0
   gradient:
     serializedVersion: 2
     key0: {r: 0.8679245, g: 0.08515483, b: 0.08515483, a: 1}
@@ -752,7 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airBar: {fileID: 404115857}
-  airRegenRate: 4.2
+  airRegenRate: 20
 --- !u!61 &602230555
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -766,7 +769,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0554834, y: 0.18494463}
+  m_Offset: {x: 0.05548334, y: 0.22305381}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -777,7 +780,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7384791, y: 1.3698893}
+  m_Size: {x: 2.7384791, y: 1.6059291}
   m_EdgeRadius: 0
 --- !u!4 &602230556
 Transform:
@@ -955,6 +958,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &983614246 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6380414542965983769, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+  m_PrefabInstance: {fileID: 5410063048734180817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1429574037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,7 +2805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c0e98008ae7fa41b446853b0f1c90d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 206716664}
+  player: {fileID: 983614246}
 --- !u!81 &1656566820
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3015,8 +3023,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: airBar
+      value: 
+      objectReference: {fileID: 404115857}
+    - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
       propertyPath: swimSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: swimSuffication
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
       propertyPath: swimInput.m_SingletonActionBindings.Array.size
@@ -3027,8 +3043,24 @@ PrefabInstance:
       value: 8a6c1cbd-4be6-4854-a56c-2f807cb21fa4
       objectReference: {fileID: 0}
     - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: swimInput.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/shift
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
       propertyPath: swimInput.m_SingletonActionBindings.Array.data[1].m_Action
       value: Swim Input
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315623531404736118, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4856553
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315623531404736118, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315623531404736118, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.017172337
       objectReference: {fileID: 0}
     - target: {fileID: 2979735488255126646, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
       propertyPath: m_Name
