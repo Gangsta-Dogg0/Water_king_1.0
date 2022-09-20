@@ -9,8 +9,10 @@ public class player_contolls : MonoBehaviour
     public Rigidbody2D rb;
     public float movespeed = 5f;
     public float jumpspeed = 50f;
+    public float swimSpeed = 20f;
     public InputAction horuzontalinput;
     public InputAction jumpInput;
+    public InputAction swimInput;
     public Collider2D playerColider;
     public int health;
     public int invincibilityframes;
@@ -19,6 +21,7 @@ public class player_contolls : MonoBehaviour
 
     private float direction; //
     private float jumped; //
+    private float swim;
     private bool hasjumped = false; //
 
     private void OnEnable()
@@ -47,6 +50,7 @@ public class player_contolls : MonoBehaviour
     {
         direction = horuzontalinput.ReadValue<float>();
         jumped = jumpInput.ReadValue<float>();
+        swim = swimInput.ReadValue<float>();
     }
 
     private void FixedUpdate()
@@ -62,6 +66,11 @@ public class player_contolls : MonoBehaviour
         else if (jumped == 0)
         {
             hasjumped = false;
+        }
+
+        if (swim == 1)
+        {
+            rb.AddForce(new Vector2(direction * swimSpeed, jumped * swimSpeed));
         }
 
     }
