@@ -34,7 +34,10 @@ public class player_contolls : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isGrounded = true;
+        if (collision.tag == "Ground")
+        {
+            isGrounded = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -44,7 +47,6 @@ public class player_contolls : MonoBehaviour
     {
         direction = horuzontalinput.ReadValue<float>();
         jumped = jumpInput.ReadValue<float>();
-        Debug.Log(playerColider.IsTouchingLayers(6));
     }
 
     private void FixedUpdate()

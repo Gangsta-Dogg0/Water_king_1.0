@@ -9,7 +9,7 @@ public class airBar : MonoBehaviour
 {
     public Slider airbar;
     public float air = 50f;
-    public float suficationAmount = 4.20f;
+    public float suficationAmount = -4.20f;
     public Gradient gradient;
     public Image colur;
 
@@ -23,7 +23,7 @@ public class airBar : MonoBehaviour
 
     void Update()
     {
-        curentAir -= suficationAmount * Time.deltaTime;
+        curentAir += suficationAmount * Time.deltaTime;
         airbar.value = curentAir;
 
         colur.color = gradient.Evaluate(airbar.value / 100);
