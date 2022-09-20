@@ -3014,6 +3014,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: swimSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: swimInput.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: swimInput.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 8a6c1cbd-4be6-4854-a56c-2f807cb21fa4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: swimInput.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Swim Input
+      objectReference: {fileID: 0}
     - target: {fileID: 2979735488255126646, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
       propertyPath: m_Name
       value: player
