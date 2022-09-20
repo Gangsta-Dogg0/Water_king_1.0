@@ -3027,8 +3027,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 404115857}
     - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
+      propertyPath: jumpspeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
       propertyPath: swimSpeed
-      value: 20
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1924860664703386206, guid: ab6a6761b14253647a750e857e2f5153, type: 3}
       propertyPath: swimSuffication
