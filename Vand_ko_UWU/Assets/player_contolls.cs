@@ -12,6 +12,9 @@ public class player_contolls : MonoBehaviour
     public InputAction horuzontalinput;
     public InputAction jumpInput;
     public Collider2D playerColider;
+    public int health;
+    public int invincibilityframes;
+    public int invincibilitycooldown;
     bool isGrounded;
 
     private float direction; //
@@ -46,14 +49,36 @@ public class player_contolls : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(new Vector2(direction*movespeed, 0));
+        rb.AddForce(new Vector2(direction * movespeed, 0));
         bool test = playerColider.IsTouchingLayers(6);
-        
+
         if (jumped == 1 && isGrounded)
         {
             rb.AddForce(new Vector2(0, jumpspeed));
+            hasjumped = true;
+        }
+        else if (jumped == 0)
+        {
+            hasjumped = false;
         }
 
     }
+    private void OnTiggerStay2D(Collider2D collider)
+    {
+        if (invincibilitycooldown < 1)
+            health -= 1;
+        invincibilitycooldown = invincibilityframes;
+        if (health == 0)
+        {
+            Debug.Log("wow det viker!");
+        }
+    }
 
+    void fixedupdate()
+    {
+
+
+        invincibilitycooldown -= 1;
+
+    }
 }
