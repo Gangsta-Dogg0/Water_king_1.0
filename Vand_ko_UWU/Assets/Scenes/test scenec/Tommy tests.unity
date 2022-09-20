@@ -363,6 +363,7 @@ MonoBehaviour:
   rb: {fileID: 206716661}
   movespeed: 7
   jumpspeed: 500
+  swimSpeed: 500
   horuzontalinput:
     m_Name: Horuzontalinput
     m_Type: 0
@@ -428,6 +429,23 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Jump Input
       m_Flags: 8
+    m_Flags: 0
+  swimInput:
+    m_Name: Swim Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5fb57441-1c15-49d3-a9df-2af9982d1f9c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 43c00496-9b05-4bab-b9a8-66fc066acbb7
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Swim Input
+      m_Flags: 0
     m_Flags: 0
   playerColider: {fileID: 206716658}
   health: 0
