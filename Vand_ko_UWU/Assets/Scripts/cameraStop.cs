@@ -19,13 +19,13 @@ public class cameraStop : MonoBehaviour
 
         //why math dont work pls help???? :( <--- me rn because of it dont work
         x = Mathf.Clamp(x, -19, 19);
-        if (player.position.y >= 4 && player.position.y < 14)
+        if (player.position.y > this.transform.position.y + 4.86f)
         {
-            y = y + 10;
+            y += 10;
         }
-        if (player.position.y < 4 && player.position.y >= -1)
+        if (player.position.y < this.transform.position.y - 4.86f)
         {
-            y = y - 10;
+            y -= 10;
         }
 
         transform.position = new Vector3(x, y,-10);
