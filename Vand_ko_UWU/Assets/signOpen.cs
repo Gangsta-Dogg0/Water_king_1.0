@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class signOpen : MonoBehaviour
 {
     public GameObject sign;
+    public GameObject pressButton;
     public InputAction signOpener;
     private int x = 0;
 
@@ -25,11 +26,9 @@ public class signOpen : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && Input.GetKeyDown("f") && x == 0)
+        if(collision.CompareTag("Player"))
         {
-            sign.SetActive(true);
-            x += 1;
-            TurnOffSign();
+            pressButton.SetActive(true);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -45,6 +44,7 @@ public class signOpen : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         sign.SetActive(false);
+        pressButton.SetActive(false);
     }
     void TurnOffSign()
     {

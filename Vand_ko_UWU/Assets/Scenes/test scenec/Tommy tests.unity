@@ -1564,7 +1564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &681904627
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1634,6 +1634,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sign: {fileID: 681904626}
+  signOpener:
+    m_Name: Sign Opener
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 08c6dd74-a63a-469b-9a75-95cad5615da7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: fd2c60c9-8a77-4e22-96dd-ed0d43cb6e46
+      m_Path: <Keyboard>/f
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Sign Opener
+      m_Flags: 0
+    m_Flags: 0
 --- !u!61 &694070488
 BoxCollider2D:
   m_ObjectHideFlags: 0
