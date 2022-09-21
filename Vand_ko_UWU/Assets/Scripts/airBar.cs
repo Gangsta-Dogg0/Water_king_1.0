@@ -19,6 +19,7 @@ public class airBar : MonoBehaviour
     void Start()
     {
         airbar.value = air;
+        airbar.maxValue = air;
         curentAir = air;
     }
 
