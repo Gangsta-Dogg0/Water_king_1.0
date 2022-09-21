@@ -14,16 +14,19 @@ public class player_contolls : MonoBehaviour
     public InputAction horuzontalinput;
     public InputAction jumpInput;
     public InputAction swimInput;
+    public InputAction menuInput;
     public Collider2D playerColider;
     public int health;
     public int invincibilityframes;
     public int invincibilitycooldown;
     bool isGrounded;
     public airBar airBar;
+    public GameObject menuObject;
 
     private float direction; //
     private float jumped; //
     private float swim;
+    private float menu;
     private bool hasjumped = false; //
 
     private void OnEnable()
@@ -31,6 +34,7 @@ public class player_contolls : MonoBehaviour
         horuzontalinput.Enable();
         jumpInput.Enable();
         swimInput.Enable();
+        menuInput.Enable();
     }
 
     private void OnDisable()
@@ -38,6 +42,7 @@ public class player_contolls : MonoBehaviour
         horuzontalinput.Disable();
         jumpInput.Disable();
         swimInput.Disable();
+        menuInput.Disable();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -55,6 +60,13 @@ public class player_contolls : MonoBehaviour
         direction = horuzontalinput.ReadValue<float>();
         jumped = jumpInput.ReadValue<float>();
         swim = swimInput.ReadValue<float>();
+        menu = menuInput.ReadValue<float>();
+
+        if(menu == 1)
+        {
+            menuObject.SetActive(true);
+            Time.timeScale = 1;
+        }
     }
 
     private void FixedUpdate()
