@@ -33,8 +33,6 @@ public class airBar : MonoBehaviour
         curentAir = Mathf.Clamp(curentAir, 0, 100);
         airbar.value = curentAir;
 
-        print(curentAir);
-
         colur.color = gradient.Evaluate(airbar.value / 100);
 
         if (curentAir <= 0)
