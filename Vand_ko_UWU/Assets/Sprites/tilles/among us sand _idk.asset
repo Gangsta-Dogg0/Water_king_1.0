@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 'among us sand '
+  m_Name: among us sand _idk
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -292412963, guid: 2a52718ec05f76243a0c229ee5ee6524, type: 3}
+  m_Sprite: {fileID: -498818951, guid: 774190f0ff7849046a6ac1c30be83fb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
