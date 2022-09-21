@@ -11,12 +11,12 @@ public class pauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         this.gameObject.SetActive(false);
     }
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void Settings()
     {
