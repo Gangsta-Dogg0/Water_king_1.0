@@ -37,7 +37,7 @@ public class airBar : MonoBehaviour
 
         if (curentAir <= 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 

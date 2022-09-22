@@ -17,6 +17,7 @@ public class pauseMenu : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1;
     }
     public void Settings()
     {
@@ -25,6 +26,7 @@ public class pauseMenu : MonoBehaviour
     }
     public void Quit()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 }
