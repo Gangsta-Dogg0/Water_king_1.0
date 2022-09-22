@@ -13,6 +13,7 @@ public class airBar : MonoBehaviour
     public float breatheAmount = -0f;
     public Gradient gradient;
     public Image colur;
+    public Image deathGrade;
 
     private float curentAir;
 
@@ -37,8 +38,13 @@ public class airBar : MonoBehaviour
 
         if (curentAir <= 0)
         {
-            SceneManager.LoadScene(1);
+            for (int i = 0; i > 255; i++)
+            {
+                deathGrade.color = new Color(0, 0, 0, i);
+                
+            }
+                SceneManager.LoadScene(1);
         }
     }
-
+    
 }
