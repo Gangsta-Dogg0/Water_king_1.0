@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 602144774}
   - component: {fileID: 602144773}
   m_Layer: 5
-  m_Name: pressButton
+  m_Name: PressF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2075,7 +2075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &682784983
 Transform:
   m_ObjectHideFlags: 0
@@ -2155,7 +2155,7 @@ GameObject:
   - component: {fileID: 694070486}
   - component: {fileID: 694070489}
   - component: {fileID: 694070488}
-  - component: {fileID: 694070487}
+  - component: {fileID: 694070490}
   m_Layer: 6
   m_Name: sign
   m_TagString: Untagged
@@ -2178,37 +2178,6 @@ Transform:
   m_Father: {fileID: 1804167400}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &694070487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694070485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04c3afaca0269b5488492e9204052933, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sign: {fileID: 681904626}
-  pressButton: {fileID: 602144771}
-  signOpener:
-    m_Name: Sign Opener
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 08c6dd74-a63a-469b-9a75-95cad5615da7
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: fd2c60c9-8a77-4e22-96dd-ed0d43cb6e46
-      m_Path: <Keyboard>/f
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Sign Opener
-      m_Flags: 0
-    m_Flags: 0
 --- !u!61 &694070488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2287,6 +2256,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &694070490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694070485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b09357169326c14cbae902c856ae8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 681904626}
+  pressF: {fileID: 602144771}
+  textOpener:
+    m_Name: Text Opener
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ec9b0f28-051b-4ab7-9b4d-aaf405aedd27
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 094c4710-4688-44d2-9fc9-4c40bde4f535
+      m_Path: <Keyboard>/f
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Text Opener
+      m_Flags: 0
+    m_Flags: 0
+  textToWrite: Hello there, m8! If you are reading this you need help. in that case
+    you move left and rigth using "A" and "D", jump using "W" and last but not least
+    swim with "Shift". so now gtf out of here you'll drown, HURRY!!!
+  textObject: {fileID: 1493840651}
 --- !u!1 &696781961
 GameObject:
   m_ObjectHideFlags: 0
@@ -8901,6 +8905,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1731704402}
   - component: {fileID: 1731704403}
+  - component: {fileID: 1731704404}
+  - component: {fileID: 1731704406}
+  - component: {fileID: 1731704405}
   m_Layer: 0
   m_Name: Monky
   m_TagString: Untagged
@@ -8975,6 +8982,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1731704404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731704401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b09357169326c14cbae902c856ae8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 681904626}
+  pressF: {fileID: 602144771}
+  textOpener:
+    m_Name: Text Opener
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b788c2d8-b95c-447b-ab2d-98d8f9a41719
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 74ce706d-a570-481d-a340-cae9071b7e1e
+      m_Path: <Keyboard>/f
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Text Opener
+      m_Flags: 0
+    m_Flags: 0
+  textToWrite: Im monke, creddits Rasmus Andersen Bladt
+  textObject: {fileID: 1493840651}
+--- !u!61 &1731704405
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731704401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.1206918, y: -0.07068968}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.12, y: 2.93}
+    newSize: {x: 3.12, y: 2.93}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7062027, y: 2.9299998}
+  m_EdgeRadius: 0
+--- !u!61 &1731704406
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731704401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.023563147, y: -0.09425336}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.12, y: 2.93}
+    newSize: {x: 3.12, y: 2.93}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5073543, y: 2.7886205}
+  m_EdgeRadius: 0
 --- !u!1 &1734203136
 GameObject:
   m_ObjectHideFlags: 0

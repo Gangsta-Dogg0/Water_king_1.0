@@ -65,7 +65,7 @@ public class player_contolls : MonoBehaviour
         if(menu == 1)
         {
             menuObject.SetActive(true);
-            Time.timeScale = 1;
+            Time.timeScale = 0;
         }
     }
 
