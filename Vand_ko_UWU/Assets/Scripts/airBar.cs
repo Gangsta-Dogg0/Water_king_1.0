@@ -41,10 +41,14 @@ public class airBar : MonoBehaviour
             for (int i = 0; i > 255; i++)
             {
                 deathGrade.color = new Color(0, 0, 0, i);
-                
+                secondsWaiter();
             }
                 SceneManager.LoadScene(1);
         }
+    }
+    IEnumerator secondsWaiter()
+    {
+        yield return new WaitForSeconds(1f);
     }
     
 }
