@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 'among us sand '
+  m_Name: stone rick
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -292412963, guid: 2a52718ec05f76243a0c229ee5ee6524, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c20821b2e40f184c8b2e40546706e90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
