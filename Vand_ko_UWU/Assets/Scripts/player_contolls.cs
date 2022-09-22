@@ -22,6 +22,7 @@ public class player_contolls : MonoBehaviour
     bool isGrounded;
     public airBar airBar;
     public GameObject menuObject;
+    public AudioSource jumpSound;
 
     private float direction; //
     private float jumped; //
@@ -77,6 +78,7 @@ public class player_contolls : MonoBehaviour
         if (jumped == 1 && isGrounded)
         {
             rb.AddForce(new Vector2(0, jumpspeed));
+            jumpSound.Play();
             hasjumped = true;
         }
         else if (jumped == 0)

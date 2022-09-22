@@ -18,10 +18,18 @@ public class moveCurrent : MonoBehaviour
         if (rigth == true)
         {
             transform.position += new Vector3(currentSpeed * Time.deltaTime, 0);
+            if (transform.position.x >= 17.5)
+            {
+                transform.position = new Vector3(0, transform.position.y);
+            }
         }
         if (rigth == false)
         {
             transform.position -= new Vector3(currentSpeed * Time.deltaTime, 0);
+            if (transform.position.x <= -17.5)
+            {
+                transform.position = new Vector3(0, transform.position.y);
+            }
         }
     }
 }
