@@ -35,20 +35,22 @@ public class airBar : MonoBehaviour
         airbar.value = curentAir;
 
         colur.color = gradient.Evaluate(airbar.value / 100);
-
+        
         if (curentAir <= 0)
         {
-            for (int i = 0; i > 255; i++)
+            while(true)
             {
-                deathGrade.color = new Color(0, 0, 0, i);
+                print("g");
+                deathGrade.color = new Color(0, 0, 0, 50);
                 secondsWaiter();
+
             }
-                SceneManager.LoadScene(1);
+            SceneManager.LoadScene(1);
         }
     }
     IEnumerator secondsWaiter()
     {
         yield return new WaitForSeconds(1f);
     }
-    
+
 }
