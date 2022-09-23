@@ -14,6 +14,7 @@ public class airBar : MonoBehaviour
     public Gradient gradient;
     public Image colur;
     public Image deathGrade;
+    public GameObject deathGradeOject;
 
     private float curentAir;
 
@@ -38,19 +39,21 @@ public class airBar : MonoBehaviour
         
         if (curentAir <= 0)
         {
-            while(true)
-            {
-                print("g");
-                deathGrade.color = new Color(0, 0, 0, 50);
-                secondsWaiter();
-
+            deathGradeOject.SetActive(true);
+            for (int i = 1; i < 101; i++)
+            {                
+                float grade = i;
+                grade = grade / 100;
+                deathGrade.color = new Color(0, 0, 0, grade);
+                print(grade);
+                StartCoroutine(secondsWaiter());
             }
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(1);
         }
     }
     IEnumerator secondsWaiter()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSecondsRealtime(5f);
     }
 
 }
