@@ -17,6 +17,7 @@ public class airBar : MonoBehaviour
     public GameObject deathGradeOject;
 
     private float curentAir;
+    private float grade = 0;
 
     void Start()
     {
@@ -40,15 +41,15 @@ public class airBar : MonoBehaviour
         if (curentAir <= 0)
         {
             deathGradeOject.SetActive(true);
-            for (int i = 1; i < 101; i++)
-            {                
-                float grade = i;
-                grade = grade / 100;
-                deathGrade.color = new Color(0, 0, 0, grade);
-                print(grade);
-                StartCoroutine(secondsWaiter());
+            deathGrade.color = new Color(0,0,0, grade);
+            if (grade < 1)
+            {
+                grade += 0.01f;
+            } else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
-            //SceneManager.LoadScene(1);
+
         }
     }
     IEnumerator secondsWaiter()

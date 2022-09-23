@@ -17255,6 +17255,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 3
   colur: {fileID: 900299088}
   deathGrade: {fileID: 915666781}
+  deathGradeOject: {fileID: 0}
 --- !u!224 &1900279654
 RectTransform:
   m_ObjectHideFlags: 0
