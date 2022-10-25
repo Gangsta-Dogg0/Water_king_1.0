@@ -356,7 +356,7 @@ MonoBehaviour:
       m_Action: Text Opener
       m_Flags: 0
     m_Flags: 0
-  textToWrite: CRAB! He' name is Jack and he has a mage sixpack
+  textToWrite: CRAB! His name is Jack and he has a mega sixpack
   textObject: {fileID: 1776198060}
 --- !u!61 &92781574
 BoxCollider2D:
@@ -17736,8 +17736,8 @@ MonoBehaviour:
       m_Action: Text Opener
       m_Flags: 0
     m_Flags: 0
-  textToWrite: Hello there, remmber this is a very early sage game so there is a
-    lot of shit in the game, but we hope that "you have fun"
+  textToWrite: Hello there, remember this is a very early stage game so there is
+    a lot of shit in the game, but we hope that "you have fun"
   textObject: {fileID: 1092883981}
 --- !u!61 &1720779424
 BoxCollider2D:
@@ -18319,7 +18319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CRAB! He' name is Jack  and he has a mage sixpack
+  m_text: CRAB! His name is Jack and he has a mega sixpack
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
